@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:c="http://www.springframework.org/schema/c"    
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">   
+    <!-- 
+     <bean class="com.springcore.Emp.Address" name="add1" c:address="UP , DEHRADUN, P_NAGAR"></bean>
+    
+     <bean class="com.springcore.Emp.Employee" name="emp1">
+      <constructor-arg value=" VIKASH THAKUR"  />
+        <constructor-arg value=" 21 " type="int" />
+        <constructor-arg value=" 9*****63** " type="int" />
+        <constructor-arg ref="add1"/>
+     </bean> 
+     -->
+    
+        <bean class="com.springcore.Emp.Address" name="add1" p:address="UP , DEHRADUN, P_NAGAR"/>
+     
+    <bean class="com.springcore.Emp.Employee" name="emp1" p:name="VIKASH " p:age="21" p:phones="9****4**3  , ****50****, 013**220***" p:address-ref="add1"/> 
+   
+    <!-- 
+         <bean class="com.springcore.Emp.Address" name="add1">
+      <property name="address">
+     <set>
+       <value>UP</value>
+       <value>DEHRADUN</value>
+       <value>PREM NAGAR</value>
+     </set>
+     </property>
+    </bean>
+    
+    
+    <bean class="com.springcore.Emp.Employee" name="emp1">
+    	<property name="name" value="VIKASH"/>    
+    	<property name="age" value="21"/>  
+    	<property name="phones">
+     <list>
+       <value>9******63</value>
+       <value>****50****</value>
+       <value>013**220***</value>
+     </list>
+     </property>
+       <property name="address">
+         <ref bean="add1"/>
+    </property>
+    </bean>
+   -->
+
+</beans>
